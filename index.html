@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>15 Sections</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20"><circle cx="10" cy="10" r="6" fill="red" /></svg>'), auto;
+  }
+  .section h2 {
+    position: absolute;
+    top: 65%; /* 섹션 상단에서 아래 방향으로 50% 위치에 */
+    left: 50%; /* 섹션 좌측에서 우측 방향으로 50% 위치에 */
+    transform: translate(-50%, 50%); /* 요소를 수평으로 50%, 수직으로 50% 이동 */
+    color: white; /* 폰트 색상을 화이트로 설정 */
+    font-size: 28pt;
+  }
+
+  nav {
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .button-box {
+    width: 258px;
+    height: 73px;
+    background-color: gray;
+    margin-left: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button {
+    font-size: 48pt;
+    font-weight: lighter;
+    color: black;
+    text-decoration: none;
+  }
+  .button-box:hover {
+  background-color: white;
+}
+
+.button-box:hover .button {
+  color: gray;
+}
+
+
+  .section {
+    width: 100%; /* 섹션의 너비를 화면에 꽉 차게 설정 */
+    height: 50vh; /* 섹션의 높이를 화면 높이의 절반으로 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    margin-top: 0; /* 위쪽 간격 없앰 */
+    margin-bottom: 0; /* 아래쪽 간격 없앰 */
+    position: relative; /* 부모 요소 기준으로 자식 요소의 위치를 조정하기 위해 추가 */
+  }
+
+  .section img {
+    max-width: 100%; /* 이미지를 섹션의 최대 너비에 맞춤 */
+    height: auto; /* 비율을 유지하면서 이미지 높이를 자동 조정 */
+    object-fit: cover; /* 이미지가 비율을 유지하면서 섹션을 덮도록 설정 */
+  }
+
+  .sticker {
+    position: absolute;
+    z-index: 1; /* 다른 요소 위에 표시되도록 설정 */
+    width: 420px; /* 스티커의 너비 조절 */
+    height: auto; /* 비율을 유지하면서 높이 자동 조정 */
+  }
+
+  .hidden {
+    opacity: 0;
+  }
+
+  .section {
+    background-size: cover; /* 배경 이미지를 화면에 맞게 늘립니다. */
+    background-position: center; /* 배경 이미지를 가운데 정렬합니다. */
+  }
+  .sticker {
+    position: absolute;
+    z-index: 1; /* 다른 요소 위에 표시되도록 설정 */
+    width: 420px; /* 스티커의 너비 조절 */
+    height: auto; /* 비율을 유지하면서 높이 자동 조정 */
+  }
+
+  .sticker1 {
+    top: 130px;
+    right: 80px;
+  }
+
+  .sticker2 {
+    top: 130px;
+    right: 80px;
+  }
+
+  .hidden {
+    opacity: 0;
+  }
+
+  .sticker3 {
+    top: 130px;
+    right: 400px;
+    width: 350px;
+  }
+
+  .sticker4 {
+    top: 130px;
+    right: 400px;
+    width: 350px;
+  }
+
+  .sticker5 {
+    top: 230px;
+    right: 800px;
+    width: 350px;
+  }
+
+  .sticker6 {
+    top: 230px;
+    right: 800px;
+    width: 350px;
+  }
+  .sticker {
+  position: absolute;
+}
+
+.sticker7 {
+  top: 10px;
+  left: 150px;
+  width: 250px;
+  height: 250px;
+}
+
+.sticker8 {
+  top: 10px;
+  left: 520px;
+  width: 160px;
+  height: 160px;
+}
+
+.sticker9 {
+  top: 10px;
+  left: 800px;
+  width: 210px;
+  height: 210px;
+}
+
+.sticker10 {
+  top: 10px;
+  right: 480px;
+  width: 190px;
+  height: 190px;
+}
+
+.sticker11 {
+  top: 10px;
+  right: 120px;
+  width: 250px;
+  height: 250px;
+}
+
+
+.sticker12 {
+  top: 10px;
+  left: 150px;
+  width: 250px;
+  height: 250px;
+}
+
+.sticker13 {
+  top: 10px;
+  left: 520px;
+  width: 160px;
+  height: 160px;
+}
+
+.sticker14 {
+  top: 10px;
+  left: 800px;
+  width: 210px;
+  height: 210px;
+}
+
+.sticker15 {
+  top: 10px;
+  right: 480px;
+  width: 190px;
+  height: 190px;
+}
+
+.sticker16 {
+  top: 10px;
+  right: 120px;
+  width: 250px;
+  height: 250px;
+}
+  .hidden {
+    opacity: 0;
+  }
+
+  .section {
+  background-size: cover; /* 배경 이미지를 화면에 맞게 늘립니다. */
+  background-position: center; /* 배경 이미지를 가운데 정렬합니다. */
+}
+
+
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="button-box"><a href="#" class="button">상품설명</a></div>
+  <div class="button-box"><a href="#" class="button">구매하기</a></div>
+  <div class="button-box"><a href="#" class="button" onclick="changeVideo()">속도 측정</a></div>
+</nav>
+
+<div class="section" style="background-color: black; height: 120vh;">
+  <video autoplay muted loop class="video-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+    <source src="first1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <h2 style="z-index: 1; position: relative;"></h2>
+</div>
+
+<div class="section" style="background-color: black; height: 52.5vh;">
+  <video autoplay muted loop class="video-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain;">
+    <source src="bpm.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <h2 style="z-index: 1; position: relative;"></h2>
+</div>
+
+<div class="section" style="background-color: black; height: 20vh;">
+  <img src="hyun.jpg" alt="Section 3 Image">
+  <h2></h2>
+</div>
+
+<div class="section" style="background-color: black; height: 110vh;">
+  <img src="met.jpg" alt="Section 4 Image">
+  <img class="sticker sticker1" src="s3.png" alt="Sticker 1">
+  <img class="sticker sticker2" src="s3t.png" alt="Sticker 2" onmouseover="hideSticker(this)" onmouseout="showSticker(this)">
+  <img class="sticker sticker3" src="1.png" alt="Sticker 3">
+  <img class="sticker sticker4" src="1t.png" alt="Sticker 4" onmouseover="hideSticker(this)" onmouseout="showSticker(this)">
+  <img class="sticker sticker5" src="2.png" alt="Sticker 5">
+  <img class="sticker sticker6" src="2t.png" alt="Sticker 6" onmouseover="hideSticker(this)" onmouseout="showSticker(this)">
+  <h2>무엇이 당신의 속도를 결정하나요?</h2>
+</div>
+
+<div class="section" style="background-color: black; height: 120vh;">
+  <video autoplay muted loop class="video-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+    <source src="busy.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video> 
+  <h2 style="z-index: 1; position: relative;"></h2>
+  <div class="button-box rounded-box" style="position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%); background-color: white; border-radius: 50%; width: 300px; height: 300px;">
+    <a href="#section9" class="button" style="font-weight: bold; color: black; font-size: 30pt; line-height: 100px; white-space: nowrap;">속도 줄이기</a>
+  </div>
+</div>
+
+<div class="section" style="background-color: black; height: 700vh;">
+</div>
+
+<div class="section" id="section9" style="background-image: url('your_video.jpg'); height: 100vh; display: flex; justify-content: center; align-items: center;">
+  <video autoplay muted loop class="video-bg" style="width: 100%; height: 100%; object-fit: cover;">
+    <source src="busy2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+
+<div class="section" style="background-image: url('bbu.jpg'); height: 320vh; display: flex; justify-content: center; align-items: center;">
+  <h2 style="text-align: center; white-space: nowrap; font-weight: normal; line-height: 1.5;">악보를 보면 항상 맨 처음 시작에는 박자가 적혀있듯 우리의 삶에도<br> 그에 맞는 속도가 있는게 아닐까요? <br><br>우리는 그 속도를 모른채 살아가거나 이 속도가 아님을 알고도<br> 더 빠른 속도로 살아내려합니다.<br> <br>이러한 현대인에게 <br>속도를 맞춰주고 체크해줄 무언가가 <br>필요합니다.</h2>
+</div>
+
+
+
+<div class="section" style="position: relative;">
+  <video autoplay muted loop class="video-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+    <source src="secon.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+</div>
+
+<div class="section" style="background-image: url('product.jpg'); background-size: cover; background-position: center; width: 100vw; height: 2500px;">
+
+</div>
+
+
+<div class="section" id="section9" style="position: relative;;">
+  <video autoplay muted loop class="video-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+    <source src="bpm.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+<div class="section" style="background-color: black; height: 50vh; display: flex; justify-content: flex-start; align-items: flex-start;">
+  <h2 style="color: white; margin-top: 0px; margin-left: 20px;">당신은 어떤 속도로 살아가나요?</h2>
+</div>
+
+<div class="section" style="background-color: black; height: 50vh; display: flex; justify-content: flex-start; align-items: flex-start; position: relative;">
+  <img class="sticker sticker12" src="la2.png" alt="Sticker 12"onclick="scrollToSection('section12')">
+  <img class="sticker sticker7" src="la.png" alt="Sticker 7"onmouseover="hideSticker(this)" onmouseout="showSticker(this)"onclick="scrollToSection('section12')">
+  <img class="sticker sticker13" src="ad2.png" alt="Sticker 13">
+  <img class="sticker sticker8" src="ad.png" alt="Sticker 8"onmouseover="hideSticker(this)" onmouseout="showSticker(this)">
+  <img class="sticker sticker14" src="mo2.png" alt="Sticker 14">
+  <img class="sticker sticker9" src="mo.png" alt="Sticker 9"onmouseover="hideSticker(this)" onmouseout="showSticker(this)">
+  <img class="sticker sticker15" src="al2.png" alt="Sticker 15">
+  <img class="sticker sticker10" src="al.png" alt="Sticker 10"onmouseover="hideSticker(this)" onmouseout="showSticker(this)">
+  <img class="sticker sticker16" src="vi2.png" alt="Sticker 16">
+  <img class="sticker sticker11" src="vi.png" alt="Sticker 11"onmouseover="hideSticker(this)" onmouseout="showSticker(this)">
+  
+</div>
+
+</div>
+<div class="section" style="background-image: url('your_video.jpg'); height: 140vh; display: flex; justify-content: center; align-items: center;">
+  <video autoplay muted loop class="video-bg" style="width: 110%; height: 110%; object-fit: cover;">
+    <source src="beat.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+<div class="section" style="background-color: #ff6666;"><h2>Section 13</h2></div>
+<div class="section" style="background-color: #ff9966;"><h2>Section 14</h2></div>
+<div class="section" style="background-color: #ffcc66;"><h2>Section 15</h2></div>
+<div class="section" style="background-color: #ffcc66;"><h2>Section 15</h2></div>
+<script>
+  // 스티커를 숨기는 함수
+  function hideSticker(element) {
+    element.classList.add("hidden");
+  }
+
+  // 스티커를 보이는 함수
+  function showSticker(element) {
+    element.classList.remove("hidden");
+  }
+
+  // 버튼을 클릭했을 때 실행될 함수
+  function changeVideo() {
+    // 여기에 비디오 변경 관련 코드 추가
+  }
+  function scrollToSection(sectionId) {
+    var section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+</script>
+
+</body>
+</html>
